@@ -6,9 +6,11 @@
   "author": "jefferson oliveira <jefinho.moura14@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --open --history-api-fallback"
+    "dev": "webpack-dev-server --open --history-api-fallback",
+    "release": "webpack -d"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",

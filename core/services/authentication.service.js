@@ -40,6 +40,7 @@ class AuthenticationService extends Service {
         ...currentState,
         currentUser
       });
+
       return true;
     } catch (e) {
       return false;

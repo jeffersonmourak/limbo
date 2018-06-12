@@ -1,13 +1,18 @@
 import ServiceManager from '@services/manager';
 import User from '@authentication/user';
-
 import * as firebase from "firebase";
 class Login {
   constructor() {
     this.firebase = ServiceManager.getService('firebase');
-    
+    this.api = ServiceManager.getService('api');
+
     if (this.firebase === null) {
       throw new Error('Firebase not initialized yet');
+      return;
+    }
+
+    if (this.api === null) {
+      throw new Error('Api not initialized yet');
       return;
     }
 
@@ -27,9 +32,15 @@ class Login {
   async authenticate() {
     try {
       let result = await this.firebase.auth().signInWithPopup(this.provider),
-          profile = result.additionalUserInfo.profile;
-
-      return new User(profile.name, profile.email, profile.picture.data.url, profile.id);
+          profile = result.additionalUserInfo.profile,
+          user = await this.api.post('login', {
+            name: profile.name,
+            email: profile.email,
+            photo: profile.picture.data.url,
+            uid: profile.id
+          });
+      
+      return new User(user.name, user.email, user.photo, user.uid, user.id);
     } catch (e) {
       return null;
     }

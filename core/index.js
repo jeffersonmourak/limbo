@@ -1,6 +1,7 @@
 import ServiceManager from '@services/manager';
 import FirebaseService from '@services/firebase.service';
 import AuthenticationService from '@services/authentication.service';
+import ApiService from '@services/api.service';
 
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
@@ -17,7 +18,7 @@ class Application extends React.Component {
   constructor() {
     super();
 
-    ServiceManager.addFromServices([FirebaseService, AuthenticationService]);
+    ServiceManager.addFromServices([ApiService, FirebaseService, AuthenticationService]);
   }
 
   render() {
