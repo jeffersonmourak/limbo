@@ -1,6 +1,6 @@
 import ServiceManager from '@services/manager';
 import User from '@authentication/user';
-import * as firebase from "firebase";
+
 class Login {
   constructor() {
     this.firebase = ServiceManager.getService('firebase');
@@ -38,7 +38,7 @@ class Login {
             email: profile.email,
             photo: profile.picture.data.url,
             uid: profile.id
-          });
+          }, true);
       
       return new User(user.name, user.email, user.photo, user.uid, user.id);
     } catch (e) {

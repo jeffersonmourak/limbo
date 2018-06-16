@@ -1,0 +1,21 @@
+.list {
+  font-family: "bungee",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.list .devices, .list .actions {
+  display: flex;
+  max-width: 580px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.list .actions {
+  margin: 20px auto;
+}
+
+.list .no-devices {
+  color: #4caf50;
+}

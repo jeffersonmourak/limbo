@@ -1,0 +1,20 @@
+.limbo-input {
+  border: none;
+  background-color: #ffffff;
+  padding: 5px 5px 4px 5px;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  color: #000;
+  box-shadow: 0 0 black;
+  max-width: 400px;
+  width: 100%;
+  font-family: "bungee",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  height: 16px;
+  margin-bottom: 15px;
+}
+
+.limbo-input:focus {
+  outline: 0;
+}

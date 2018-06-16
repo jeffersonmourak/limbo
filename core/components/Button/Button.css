@@ -1,0 +1,50 @@
+.limbo-button {
+  font-family: "bungee",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  border: 1px solid #4D4D4D;
+  padding: 2px 50px;
+  font-size: 16px;
+  color: #4D4D4D;
+  cursor: pointer;
+  border-radius: 10px;
+  line-height: 35px;
+  transition: all 300ms ease;
+  margin-bottom: 20px;
+}
+
+.theme-clear {
+  border: none;
+}
+
+.theme-clear:hover {
+  color: #000;
+  background-color: #eee;
+}
+
+.theme-card-action {
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: none;
+  border-top: 1px solid #000;
+}
+
+.theme-card-action:hover {
+  background-color: #eee;
+}
+
+.theme-card-action.delete:hover {
+  color: #f44336;
+}
+
+.theme-card-action.found:hover {
+  color: #4caf50;
+}
+
+.limbo-button:hover,
+.limbo-button:focus {
+  color: #000;
+  border-color: #000;
+  outline: 0;
+}

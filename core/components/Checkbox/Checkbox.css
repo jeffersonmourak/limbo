@@ -1,0 +1,47 @@
+.checkbox-container {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0;
+}
+.checkbox-container .checkbox,
+.checkbox-container .checkbox::before {
+  content: '';
+  width: 39px;
+  height: 39px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-container .checkbox::before {
+  background-color: #000;
+  transform: scale(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  border: none;
+  transition: all 300ms ease;
+}
+
+.checkbox-container input:checked + .checkbox::before {
+  transform: scale(.8);
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkbox-container .label {
+  display: inline-block;
+  font-family: "bungee",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 5px;
+  cursor: pointer;
+}

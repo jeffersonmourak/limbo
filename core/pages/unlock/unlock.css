@@ -1,0 +1,14 @@
+.unlock-content {
+  display: flex;
+  flex-direction: column;
+  font-family: "bungee",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+.unlock-content .title {
+  font-weight: 800;
+  font-size: 7em;
+  line-height: 1em;
+}

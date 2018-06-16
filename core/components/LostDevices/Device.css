@@ -1,0 +1,25 @@
+.device {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.device .details,
+.device .action {
+  text-align: center;
+}
+
+.device .details .picture {
+  width: 100%;
+}
+
+.device .details .name {
+  font-family: "bungee",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
